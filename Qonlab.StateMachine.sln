@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{0c95f0bd-4858-426d-9380-a174d936e88d}") = "Qonlab.StateMachine", "Qonlab.StateMachine\Qonlab.StateMachine.csproj", "{1cc02bef-883e-4dfc-a421-3041d0df879d}"
+EndProject
+Project("{0badb30e-1aa8-46a7-a9a8-f93b71fc813a}") = "Qonlab.StateMachine.Abstractions", "Qonlab.StateMachine.Abstractions\Qonlab.StateMachine.Abstractions.csproj", "{14a5deec-c907-45c8-97b7-1766cb7e014b}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1cc02bef-883e-4dfc-a421-3041d0df879d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1cc02bef-883e-4dfc-a421-3041d0df879d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1cc02bef-883e-4dfc-a421-3041d0df879d}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1cc02bef-883e-4dfc-a421-3041d0df879d}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14a5deec-c907-45c8-97b7-1766cb7e014b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14a5deec-c907-45c8-97b7-1766cb7e014b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14a5deec-c907-45c8-97b7-1766cb7e014b}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14a5deec-c907-45c8-97b7-1766cb7e014b}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FF06EE5-508E-46F4-A95F-408926DB93B2}
+	EndGlobalSection
+EndGlobal
