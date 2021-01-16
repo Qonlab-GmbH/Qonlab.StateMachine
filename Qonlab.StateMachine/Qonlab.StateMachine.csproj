@@ -9,11 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Qonlab.StateMachine.Abstractions" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Qonlab.StateMachine.Abstractions\Qonlab.StateMachine.Abstractions.csproj" />
+    <PackageReference Include="Qonlab.StateMachine.Abstractions" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

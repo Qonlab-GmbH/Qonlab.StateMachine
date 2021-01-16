@@ -30,7 +30,7 @@ namespace Qonlab.StateMachine {
 
         protected virtual TTransitionExecutionInput AutomaticTransitionExecutionInput { get { return default( TTransitionExecutionInput ); } }
 
-        public StateMachineController( IEnumerable<TTransitionLogicController> transitionLogicControllers, TStateMachineDataController stateMachineDataController, ILogger logger ) {
+        public StateMachineController( ILogger logger, IEnumerable<TTransitionLogicController> transitionLogicControllers, TStateMachineDataController stateMachineDataController ) {
             _stateMachineDataController = stateMachineDataController;
             _logger = logger;
             _transitionLogicControllerByName = new Dictionary<string, TTransitionLogicController>();

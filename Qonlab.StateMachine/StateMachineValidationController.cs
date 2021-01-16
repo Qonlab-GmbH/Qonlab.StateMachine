@@ -21,7 +21,7 @@ namespace Qonlab.StateMachine {
         protected readonly IEnumerable<TTransitionLogicController> TransitionLogicControllers;
         protected readonly ILogger Logger;
 
-        public StateMachineValidationController( IEnumerable<TTransitionLogicController> transitionLogicControllers, ILogger logger ) {
+        public StateMachineValidationController( ILogger logger, IEnumerable<TTransitionLogicController> transitionLogicControllers ) {
             Logger = logger;
             TransitionLogicControllers = transitionLogicControllers;
         }
