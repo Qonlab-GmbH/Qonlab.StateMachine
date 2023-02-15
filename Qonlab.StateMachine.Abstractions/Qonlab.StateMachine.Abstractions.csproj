@@ -1,10 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Copyright>Copyright © 2021</Copyright>
-    <Company>Qonlab GmbH</Company>
-    <Authors>Qonlab GmbH</Authors>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Copyright>Copyright © 2023</Copyright>
+		<Company>Qonlab GmbH</Company>
+		<Authors>Qonlab GmbH</Authors>
+		<Version>1.0.1</Version>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/Qonlab-GmbH/Qonlab.StateMachine</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

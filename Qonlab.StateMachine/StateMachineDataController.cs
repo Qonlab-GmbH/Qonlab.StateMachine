@@ -71,14 +71,6 @@ namespace Qonlab.StateMachine {
             return null;
         }
 
-        //public virtual TStateMachineInstance GetStateMachineInstance( TStatefulElement statefulElement, string stateMachineDefinitionName ) {
-        //    if ( StateMachineDefinitionByName.ContainsKey( stateMachineDefinitionName ) ) {
-        //        var processDefinition = StateMachineDefinitionByName[ stateMachineDefinitionName ];
-        //        return GetStateMachineInstance( statefulElement, processDefinition );
-        //    }
-        //    return null;
-        //}
-
         public virtual TStateMachineInstance GetStateMachineInstance( TStatefulElement statefulElement, TStateMachineDefinition stateMachineDefinition ) {
             if ( statefulElement.StateMachineInstanceByStateMachineDefinition.ContainsKey( stateMachineDefinition ) ) {
                 return statefulElement.StateMachineInstanceByStateMachineDefinition[ stateMachineDefinition ];
