@@ -10,7 +10,8 @@ namespace Qonlab.StateMachine.Abstractions {
         where TVariableDefinition : class, IVariableDefinition<TStatefulElement, TStateMachineDefinition, TStateMachineInstance, TStateDefinition, TTransitionDefinition, TVariableDefinition, TVariableInstance>
         where TVariableInstance : class, IVariableInstance<TStatefulElement, TStateMachineDefinition, TStateMachineInstance, TStateDefinition, TTransitionDefinition, TVariableDefinition, TVariableInstance> {
 
-        bool IsCurrentUserInAnyRoleForTransition( TStatefulElement statefulElement, TTransitionDefinition transitionDefinition );
+        bool CanCurrentUserExecuteTransition( TStatefulElement statefulElement, TTransitionDefinition transitionDefinition );
+        IEnumerable<TTransitionDefinition> GetExecutableTransitionsForCurrentUser( TStatefulElement statefulElement, IEnumerable<TTransitionDefinition> transitionDefinitions );
 
         TStateMachineInstance GetStateMachineInstance( TStatefulElement statefulElement, TStateMachineDefinition stateMachineDefinition );
         TStateMachineInstance CreateStateMachineInstance( TStatefulElement statefulElement, TStateMachineDefinition stateMachineDefinition );

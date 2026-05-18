@@ -52,8 +52,12 @@ namespace Qonlab.StateMachine {
         public virtual void CacheTransitionsForStatefulElement( TStatefulElement statefulElement, IList<TTransitionDefinition> transitionDefinitions ) {
         }
 
-        public virtual bool IsCurrentUserInAnyRoleForTransition( TStatefulElement statefulElement, TTransitionDefinition transitionDefinition ) {
+        public virtual bool CanCurrentUserExecuteTransition( TStatefulElement statefulElement, TTransitionDefinition transitionDefinition ) {
             return true;
+        }
+
+        public virtual IEnumerable<TTransitionDefinition> GetExecutableTransitionsForCurrentUser( TStatefulElement statefulElement, IEnumerable<TTransitionDefinition> transitionDefinitions ) {
+            return transitionDefinitions.Where( transitionDefinition => CanCurrentUserExecuteTransition( statefulElement, transitionDefinition ) );
         }
 
         public IEnumerable<string> GetStateMachineDefinitionNames() {

@@ -108,7 +108,7 @@ namespace Qonlab.StateMachine {
 
         protected virtual bool TryUseTransition( TStateMachineInstance stateMachineInstance, TTransitionDefinition transitionDefinition, TTransitionExecutionInput input ) {
             try {
-                if ( !_stateMachineDataController.IsCurrentUserInAnyRoleForTransition( stateMachineInstance.StatefulElement, transitionDefinition ) ) {
+                if ( !_stateMachineDataController.CanCurrentUserExecuteTransition( stateMachineInstance.StatefulElement, transitionDefinition ) ) {
                     throw new UserNotAuthorizedForTransitionException( "Current user is not authorized for " + TransitionDisplayedName + " \"" + transitionDefinition.Name + "\"." );
                 }
                 if ( !IsTransitionValid( stateMachineInstance, transitionDefinition ) ) {
@@ -196,7 +196,7 @@ namespace Qonlab.StateMachine {
                 filteredTransitions = filteredTransitions.Where( t => !t.IsManual );
             }
             if ( !transitionFilter.IncludeUnauthorized ) {
-                filteredTransitions = filteredTransitions.Where( transitionDefinition => _stateMachineDataController.IsCurrentUserInAnyRoleForTransition( statefulElement, transitionDefinition ) );
+                filteredTransitions = _stateMachineDataController.GetExecutableTransitionsForCurrentUser( statefulElement, filteredTransitions );
             }
 
             return filteredTransitions;

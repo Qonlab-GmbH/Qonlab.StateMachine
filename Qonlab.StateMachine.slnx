@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Qonlab.StateMachine.Abstractions/Qonlab.StateMachine.Abstractions.csproj" />
+  <Project Path="Qonlab.StateMachine/Qonlab.StateMachine.csproj" />
+</Solution>
